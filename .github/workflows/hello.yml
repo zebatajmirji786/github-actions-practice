@@ -24,4 +24,7 @@ jobs:
 
       - name: runners os
         run: 'echo "runners OS is ${{ runner.os }}"'
+        
+      - name: intentional continue-on-error
+        run: exit 1
 
