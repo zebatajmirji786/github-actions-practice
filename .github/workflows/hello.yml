@@ -17,7 +17,7 @@ jobs:
         run: 'echo "current date and time is $(date)"'
 
       - name: branch
-        run: 'echo "branch that triggers the workflow is ${{ GITHUB_REF_NAME }}"'
+        run: 'echo "branch that triggers the workflow is $GITHUB_REF_NAME"'
 
       - name: list files
         run: ls
