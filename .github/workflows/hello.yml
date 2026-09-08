@@ -14,4 +14,4 @@ jobs:
         run: 'echo "Hello from GitHub Actions!"'
        
       - name: current date  
-        run: 'echo "current date and time is &{{date}}"'
+        run: 'echo "current date and time is &(date)"'
