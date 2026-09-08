@@ -6,12 +6,12 @@ on:
       - main
     types:
       - opened
-      - synthronize
+      - synchronize
 
 jobs:
   pr-check:
     runs-on: ubuntu-latest
     steps: 
       - name: show pr branch
-      run: echo "PR check running for branch ${{ github.head_ref }}"
+        run: echo "PR check running for branch ${{ github.head_ref }}"
       #testing full request workflow
