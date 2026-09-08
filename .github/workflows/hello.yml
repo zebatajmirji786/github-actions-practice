@@ -19,3 +19,9 @@ jobs:
       - name: branch
         run: 'echo "branch that triggers the workflow is $GITHUB_REF_NAME"'
 
+      - name: list files
+        run: ls
+
+      - name: runners os
+        run: 'echo "runners OS is $greet.runs_on"'
+
