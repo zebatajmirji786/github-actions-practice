@@ -1,0 +1,21 @@
+name: manual workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: select the environment
+        required: true
+        type: choice
+        options: 
+          - staging
+          - production
+
+
+jobs:
+  manual-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Environment
+        run: 'echo "input value is ${{ inputs.environment }}"'
