@@ -20,7 +20,7 @@ jobs:
         run: 'echo "branch that triggers the workflow is $GITHUB_REF_NAME"'
 
       - name: list files
-        run: ls
+        run: ls -la
 
       - name: runners os
         run: 'echo "runners OS is ${{ runner.os }}"'
