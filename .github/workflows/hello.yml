@@ -15,3 +15,7 @@ jobs:
        
       - name: current date  
         run: 'echo "current date and time is $(date)"'
+
+      - name: branch
+        run: 'echo "branch that triggers the workflow is $GITHUB_REF_NAME"'
+
