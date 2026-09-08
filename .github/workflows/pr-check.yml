@@ -11,7 +11,6 @@ on:
 jobs:
   pr-check:
     runs-on: ubuntu-latest
-
     steps:
       - name: Show PR branch
         run: 'echo "PR check running for branch: ${{ github.head_ref }}"'
