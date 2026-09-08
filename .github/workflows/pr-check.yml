@@ -4,7 +4,9 @@ on:
   pull_request:
     branches:
       - main
-    types: [ opened, synchronize, reopened ]
+    types:
+      - opened
+      - synthronize
 
 jobs:
   pr-check:
