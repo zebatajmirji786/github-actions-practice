@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: hostname
-        run: whoami
+        run: hostname
 
       - name: working directory
         run: pwd
