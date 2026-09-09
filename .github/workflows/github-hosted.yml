@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: info
+        shell: bash
         run: |
-         shell: bash
-         'echo"the OS Name is : $RUNNER_OS"'
+         echo"the OS Name is : $RUNNER_OS"
          echo "$(hostname)" 
          echo "$(whoami)"
 
@@ -18,9 +18,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: info
+        shell: bash
         run: |
-         shell: bash
-         'echo"the OS Name is : $RUNNER_OS"'
+         echo"the OS Name is : $RUNNER_OS"
          echo "$(hostname)" 
          echo "$(whoami)"
 
@@ -28,6 +28,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: info
+        shell: bash
         run: |
          shell: bash
          'echo"the OS Name is : $RUNNER_OS"'
