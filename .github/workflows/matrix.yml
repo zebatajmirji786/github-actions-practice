@@ -5,13 +5,17 @@ on:
 
 jobs:
   test:
-     runs-on: ubuntu-latest
+     runs-on: ${{ matrix.OS }}
      strategy:
        matrix:
          python-version:
            - '3.12'
            - '3.13'
            - '3.14'
+         OS:
+           - ubuntu-latest
+           - windows-latest
+          
      
      steps:
        - name: checkeout code
@@ -24,5 +28,7 @@ jobs:
             
        - name: python verrsion
          run: python --version
+
+      
     
   
