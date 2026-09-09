@@ -5,6 +5,7 @@ on:
     
 jobs:
   runner-test:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os:
@@ -12,10 +13,8 @@ jobs:
           - windows-latest
           - macos-latest
 
-    runs-on: ${{ matrix.os }}
-
     steps:
-      - name: Show OS
+      - name: Show info
         run: |
           echo "the OS Name is : $RUNNER_OS"
           echo "$(hostname)" 
