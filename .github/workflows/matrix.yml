@@ -12,17 +12,17 @@ jobs:
            - '3.12'
            - '3.13'
            - '3.14'
-    
-    steps:
-      - name: checkeout code
-        uses: actions\checkout@v4
+     
+     steps:
+       - name: checkeout code
+         uses: actions\checkout@v4
           
-      - name: python setup
-        uses: actions\setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - namwe: python verrsion
-        run: python --version
+       - name: python setup
+         uses: actions\setup-python@v5
+         with:
+           python-version: ${{ matrix.python-version }}
+            
+       - name: python verrsion
+         run: python --version
     
   
