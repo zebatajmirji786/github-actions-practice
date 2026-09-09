@@ -7,6 +7,8 @@ jobs:
   test:
      runs-on: ${{ matrix.OS }}
      strategy:
+       fail-fast: false
+       
        matrix:
          python-version:
            - '3.10'
@@ -32,6 +34,10 @@ jobs:
             
        - name: python verrsion
          run: python --version
+
+       - name: Test failure
+         if: matrix.python-version == '3.11' && matrix.os == 'ubuntu-latest'
+         run: exit 1
 
       
     
