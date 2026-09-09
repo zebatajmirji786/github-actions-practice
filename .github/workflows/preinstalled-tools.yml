@@ -1,0 +1,23 @@
+name: preinstall-tools
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preinstall-tools:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: docker-version
+        run: docker --version
+  
+      - name: python-version
+        run: python --version
+  
+      - name: node-version
+        run: node --version
+  
+      - name: git version
+        run: git --version
+
+     
