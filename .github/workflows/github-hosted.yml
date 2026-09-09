@@ -1,0 +1,32 @@
+name: github-hosted
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: info
+        run: |
+         'echo"the OS Name is : $RUNNER_OS"'
+         echo "$(hostname)" 
+         echo "$(whoami)"
+
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: info
+        run: |
+         'echo"the OS Name is : $RUNNER_OS"'
+         echo "$(hostname)" 
+         echo "$(whoami)"
+
+  job3:
+    runs-on: macos-latest
+    steps:
+      - name: info
+        run: |
+         'echo"the OS Name is : $RUNNER_OS"'
+         echo "$(hostname)" 
+         echo "$(whoami)"
