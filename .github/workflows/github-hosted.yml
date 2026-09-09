@@ -4,33 +4,21 @@ on:
   workflow_dispatch:
     
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: info
-        shell: bash
-        run: |
-         echo"the OS Name is : $RUNNER_OS"
-         echo "$(hostname)" 
-         echo "$(whoami)"
+  runner-test:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
 
-  job2:
-    runs-on: windows-latest
-    steps:
-      - name: info
-        shell: bash
-        run: |
-         echo"the OS Name is : $RUNNER_OS"
-         echo "$(hostname)" 
-         echo "$(whoami)"
+    runs-on: ${{ matrix.os }}
 
-  job3:
-    runs-on: macos-latest
     steps:
-      - name: info
-        shell: bash
+      - name: Show OS
         run: |
-         shell: bash
-         'echo"the OS Name is : $RUNNER_OS"'
-         echo "$(hostname)" 
-         echo "$(whoami)"
+          echo"the OS Name is : $RUNNER_OS"
+          echo "$(hostname)" 
+          echo "$(whoami)"
+
+ 
