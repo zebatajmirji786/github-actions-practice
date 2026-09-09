@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Show OS
         run: |
-          echo"the OS Name is : $RUNNER_OS"
+          echo "the OS Name is : $RUNNER_OS"
           echo "$(hostname)" 
           echo "$(whoami)"
 
