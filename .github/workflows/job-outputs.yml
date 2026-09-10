@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: set todays date
         id: date
-        run: echo "today=$(date) > $GITHUB_OUTPUT "
+        run: echo "today=$(date)" > "$GITHUB_OUTPUT"
 
   job-2:
     runs-on: ubuntu-latest
