@@ -14,7 +14,7 @@ jobs:
     needs: build
     steps:
       - name: testing app
-        run: "running tests"
+        run: echo "running tests"
   deploye:
     runs-on: ubuntu-latest
     needs: test
