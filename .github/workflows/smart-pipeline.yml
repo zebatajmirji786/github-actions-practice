@@ -26,12 +26,12 @@ jobs:
 
     steps:
       - name: its a push
-        run: |
-          if: github.ref == 'refs/heads/main'; then 
-            echo "its a main branch"
-          else
-            echo "its a feature branch"
-          fi
+        if: github.ref == 'refs/heads/main'
+        run: echo "its a main branch"
+          
+      - name: Feature branch
+        if: github.ref != 'refs/heads/main'
+        run: echo "This is a feature branch push"  
        
       - name: commit msg
         run: echo "commit to main/feature branch"
