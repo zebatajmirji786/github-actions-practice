@@ -21,10 +21,12 @@ jobs:
         run: echo "previouse step failed"
              
       - name: continue on error 
+        if: always()
         continue-on-error: true
         run: exit 1
            
       - name: next step
+        if: always()
         run: echo "previouse step failed and we are continuing printing this statement"
 
   push-onlyjob:
