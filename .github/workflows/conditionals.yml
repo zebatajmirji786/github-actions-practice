@@ -1,0 +1,38 @@
+name: conditionals
+
+on:
+  push:
+  pull_request: 
+
+jobs:
+  conditionals-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: runs if branch is main
+        if: github.ref == 'refs/heads/main'
+        run: echo "the branch is main"
+
+      - name: intensionaly failure
+        run: exit 1
+
+      - name: runs if previouse step fails
+        if: failure()
+        run: echo "previouse step failed"
+             
+      - name: continue on error 
+        continue-on-error: true
+        run: exit 1
+           
+      - name: next step
+        run: echo "previouse step failed and we are continuing printing this statement"
+
+  push-onlyjob:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: runs on push 
+        run: echo "prints when something gets push"
+
+     
