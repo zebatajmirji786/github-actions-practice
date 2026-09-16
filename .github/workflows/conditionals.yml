@@ -1,7 +1,7 @@
 name: conditionals
 
 on:
-  push:
+  workflow_dispatch: 
   pull_request: 
 
 jobs:
