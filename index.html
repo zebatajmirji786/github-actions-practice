@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            background: #14532d;
+            color: #86efac;
+            font-size: 14px;
+        }
+
+        .pipeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .info {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .info h2 {
+            margin-bottom: 15px;
+        }
+
+        .info p {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .pipeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🚀 DevOps CI/CD Dashboard</h1>
+
+            <p>
+                Automated container build and delivery pipeline
+            </p>
+
+            <span class="status">
+                ● Pipeline Ready
+            </span>
+        </div>
+
+        <div class="pipeline">
+
+            <div class="card">
+                <div class="icon">📦</div>
+                <h3>Source</h3>
+                <p>GitHub Repository</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>Build</h3>
+                <p>GitHub Actions</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🐳</div>
+                <h3>Container</h3>
+                <p>Docker Image</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">☁️</div>
+                <h3>Registry</h3>
+                <p>Docker Hub</p>
+            </div>
+
+        </div>
+
+        <div class="info">
+            <h2>Deployment Pipeline</h2>
+
+            <p>
+                Code changes are automatically processed through a
+                containerized CI/CD pipeline. GitHub Actions builds
+                the Docker image and publishes the image to Docker Hub.
+            </p>
+        </div>
+
+        <div class="footer">
+            Day 45 • 90DaysOfDevOps • Docker + GitHub Actions
+        </div>
+
+    </div>
+
+</body>
+</html>
