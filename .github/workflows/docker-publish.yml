@@ -24,9 +24,11 @@ jobs:
       - name: Tag Docker image
         run: |
           docker tag github-actions-practice:latest ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:latest
-          docker tag github-actions-practice:latest ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:sha-${GITHUB_SHA::7}
+          docker tag github-actions-practice:latest ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:sha-$SHORT_SHA
+
 
       - name: Push Docker image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:sha-${GITHUB_SHA::7}
+          docker push ${{ secrets.DOCKER_USERNAME }}/github-actions-practice:sha-$SHORT_SHA
+
