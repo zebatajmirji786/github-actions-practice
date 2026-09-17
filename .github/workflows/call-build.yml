@@ -10,6 +10,9 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       app_name: github-actions-practice
+      environment: staging
+    secrets:
+      docker_token: ${{ secrets.DOCKER_TOKEN }}
 
   show-version:
     needs: build
