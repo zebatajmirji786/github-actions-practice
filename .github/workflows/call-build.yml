@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/reusable-build.yml
+    with:
+      app_name: github-actions-practice
 
   show-version:
     needs: build
